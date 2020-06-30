@@ -10,8 +10,8 @@ package formula
 import (
 	"fmt"
 
-	"github.com/unidoc/unioffice/spreadsheet/reference"
-	"github.com/unidoc/unioffice/spreadsheet/update"
+	"github.com/umbrellala/unioffice/spreadsheet/reference"
+	"github.com/umbrellala/unioffice/spreadsheet/update"
 )
 
 // Range is a range expression that when evaluated returns a list of Results.

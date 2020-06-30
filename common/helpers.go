@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/unidoc/unioffice"
-	"github.com/unidoc/unioffice/zippkg"
+	"github.com/umbrellala/unioffice"
+	"github.com/umbrellala/unioffice/zippkg"
 )
 
 // AddImageToZip adds an image (either from bytes or from disk) and adds it to the zip file.

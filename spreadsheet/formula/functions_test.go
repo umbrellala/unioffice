@@ -13,10 +13,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/unidoc/unioffice/measurement"
-	"github.com/unidoc/unioffice/schema/soo/sml"
-	"github.com/unidoc/unioffice/spreadsheet"
-	"github.com/unidoc/unioffice/spreadsheet/formula"
+	"github.com/umbrellala/unioffice/measurement"
+	"github.com/umbrellala/unioffice/schema/soo/sml"
+	"github.com/umbrellala/unioffice/spreadsheet"
+	"github.com/umbrellala/unioffice/spreadsheet/formula"
 )
 
 // Input is an input formula string.

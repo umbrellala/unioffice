@@ -10,7 +10,6 @@ package spreadsheet
 import (
 	"archive/zip"
 	"errors"
-	"flag"
 	"fmt"
 	"image"
 	"image/jpeg"
@@ -19,18 +18,16 @@ import (
 	"strings"
 	"time"
 
-	"github.com/unidoc/unioffice"
-	"github.com/unidoc/unioffice/color"
-	"github.com/unidoc/unioffice/common"
-	"github.com/unidoc/unioffice/common/license"
-	"github.com/unidoc/unioffice/vmldrawing"
-	"github.com/unidoc/unioffice/zippkg"
+	"github.com/umbrellala/unioffice"
+	"github.com/umbrellala/unioffice/common"
+	"github.com/umbrellala/unioffice/vmldrawing"
+	"github.com/umbrellala/unioffice/zippkg"
 
-	"github.com/unidoc/unioffice/schema/soo/dml"
-	crt "github.com/unidoc/unioffice/schema/soo/dml/chart"
-	sd "github.com/unidoc/unioffice/schema/soo/dml/spreadsheetDrawing"
-	"github.com/unidoc/unioffice/schema/soo/pkg/relationships"
-	"github.com/unidoc/unioffice/schema/soo/sml"
+	"github.com/umbrellala/unioffice/schema/soo/dml"
+	crt "github.com/umbrellala/unioffice/schema/soo/dml/chart"
+	sd "github.com/umbrellala/unioffice/schema/soo/dml/spreadsheetDrawing"
+	"github.com/umbrellala/unioffice/schema/soo/pkg/relationships"
+	"github.com/umbrellala/unioffice/schema/soo/sml"
 )
 
 // ErrorNotFound is returned when something is not found
@@ -287,22 +284,6 @@ func (wb *Workbook) Epoch() time.Time {
 
 // Save writes the workbook out to a writer in the zipped xlsx format.
 func (wb *Workbook) Save(w io.Writer) error {
-	if !license.GetLicenseKey().IsLicensed() && flag.Lookup("test.v") == nil {
-		fmt.Println("Unlicensed version of UniOffice")
-		fmt.Println("- Get a license on https://unidoc.io")
-		for _, sheet := range wb.Sheets() {
-			row1 := sheet.Row(1)
-			row1.SetHeight(50)
-			a1 := row1.Cell("A")
-
-			rt := a1.SetRichTextString()
-			run := rt.AddRun()
-			run.SetText("Unlicensed version of UniOffice - Get a license on https://unidoc.io")
-			run.SetBold(true)
-			run.SetColor(color.Red)
-		}
-	}
-
 	z := zip.NewWriter(w)
 	defer z.Close()
 	dt := unioffice.DocTypeSpreadsheet

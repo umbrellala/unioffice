@@ -3,8 +3,8 @@
 package main
 
 import (
-	"github.com/unidoc/unioffice/document"
-	st "github.com/unidoc/unioffice/schema/soo/ofc/sharedTypes"
+	"github.com/umbrellala/unioffice/document"
+	st "github.com/umbrellala/unioffice/schema/soo/ofc/sharedTypes"
 )
 
 func main() {

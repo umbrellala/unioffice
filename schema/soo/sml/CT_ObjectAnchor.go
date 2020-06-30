@@ -14,8 +14,8 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/unidoc/unioffice"
-	"github.com/unidoc/unioffice/schema/soo/dml/spreadsheetDrawing"
+	"github.com/umbrellala/unioffice"
+	"github.com/umbrellala/unioffice/schema/soo/dml/spreadsheetDrawing"
 )
 
 type CT_ObjectAnchor struct {

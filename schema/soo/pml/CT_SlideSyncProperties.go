@@ -14,7 +14,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/unidoc/unioffice"
+	"github.com/umbrellala/unioffice"
 )
 
 type CT_SlideSyncProperties struct {

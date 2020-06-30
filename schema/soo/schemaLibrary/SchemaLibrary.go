@@ -12,7 +12,7 @@ package schemaLibrary
 import (
 	"encoding/xml"
 
-	"github.com/unidoc/unioffice"
+	"github.com/umbrellala/unioffice"
 )
 
 type SchemaLibrary struct {

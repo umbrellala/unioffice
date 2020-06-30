@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/unidoc/unioffice/spreadsheet"
+	"github.com/umbrellala/unioffice/spreadsheet"
 
-	"github.com/unidoc/unioffice/schema/soo/sml"
+	"github.com/umbrellala/unioffice/schema/soo/sml"
 )
 
 func main() {

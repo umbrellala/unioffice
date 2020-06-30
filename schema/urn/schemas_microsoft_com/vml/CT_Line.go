@@ -14,11 +14,11 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/unidoc/unioffice"
-	"github.com/unidoc/unioffice/schema/soo/ofc/sharedTypes"
-	"github.com/unidoc/unioffice/schema/urn/schemas_microsoft_com/office/excel"
-	"github.com/unidoc/unioffice/schema/urn/schemas_microsoft_com/office/powerpoint"
-	"github.com/unidoc/unioffice/schema/urn/schemas_microsoft_com/office/word"
+	"github.com/umbrellala/unioffice"
+	"github.com/umbrellala/unioffice/schema/soo/ofc/sharedTypes"
+	"github.com/umbrellala/unioffice/schema/urn/schemas_microsoft_com/office/excel"
+	"github.com/umbrellala/unioffice/schema/urn/schemas_microsoft_com/office/powerpoint"
+	"github.com/umbrellala/unioffice/schema/urn/schemas_microsoft_com/office/word"
 )
 
 type CT_Line struct {

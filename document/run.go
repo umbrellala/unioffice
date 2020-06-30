@@ -12,13 +12,13 @@ import (
 	"errors"
 	"math/rand"
 
-	"github.com/unidoc/unioffice"
-	"github.com/unidoc/unioffice/common"
-	"github.com/unidoc/unioffice/measurement"
-	"github.com/unidoc/unioffice/schema/soo/dml"
-	pic "github.com/unidoc/unioffice/schema/soo/dml/picture"
-	"github.com/unidoc/unioffice/schema/soo/ofc/sharedTypes"
-	"github.com/unidoc/unioffice/schema/soo/wml"
+	"github.com/umbrellala/unioffice"
+	"github.com/umbrellala/unioffice/common"
+	"github.com/umbrellala/unioffice/measurement"
+	"github.com/umbrellala/unioffice/schema/soo/dml"
+	pic "github.com/umbrellala/unioffice/schema/soo/dml/picture"
+	"github.com/umbrellala/unioffice/schema/soo/ofc/sharedTypes"
+	"github.com/umbrellala/unioffice/schema/soo/wml"
 )
 
 // Run is a run of text within a paragraph that shares the same formatting.

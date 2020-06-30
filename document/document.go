@@ -20,17 +20,17 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/unidoc/unioffice"
-	"github.com/unidoc/unioffice/color"
-	"github.com/unidoc/unioffice/common"
-	"github.com/unidoc/unioffice/common/license"
-	"github.com/unidoc/unioffice/measurement"
-	"github.com/unidoc/unioffice/zippkg"
+	"github.com/umbrellala/unioffice"
+	"github.com/umbrellala/unioffice/color"
+	"github.com/umbrellala/unioffice/common"
+	"github.com/umbrellala/unioffice/common/license"
+	"github.com/umbrellala/unioffice/measurement"
+	"github.com/umbrellala/unioffice/zippkg"
 
-	"github.com/unidoc/unioffice/schema/soo/dml"
-	st "github.com/unidoc/unioffice/schema/soo/ofc/sharedTypes"
-	"github.com/unidoc/unioffice/schema/soo/pkg/relationships"
-	"github.com/unidoc/unioffice/schema/soo/wml"
+	"github.com/umbrellala/unioffice/schema/soo/dml"
+	st "github.com/umbrellala/unioffice/schema/soo/ofc/sharedTypes"
+	"github.com/umbrellala/unioffice/schema/soo/pkg/relationships"
+	"github.com/umbrellala/unioffice/schema/soo/wml"
 )
 
 // Document is a text document that can be written out in the OOXML .docx
@@ -179,21 +179,6 @@ func (d *Document) Save(w io.Writer) error {
 		unioffice.Log("validation error in document: %s", err)
 	}
 	dt := unioffice.DocTypeDocument
-
-	if !license.GetLicenseKey().IsLicensed() && flag.Lookup("test.v") == nil {
-		fmt.Println("Unlicensed version of UniOffice")
-		fmt.Println("- Get a license on https://unidoc.io")
-		hdr := d.AddHeader()
-		para := hdr.AddParagraph()
-		para.Properties().AddTabStop(2.5*measurement.Inch, wml.ST_TabJcCenter, wml.ST_TabTlcNone)
-		run := para.AddRun()
-		run.AddTab()
-		run.AddText("Unlicensed version of UniOffice - Get a license on https://unidoc.io")
-		run.Properties().SetBold(true)
-		run.Properties().SetSize(14)
-		run.Properties().SetColor(color.Red)
-		d.BodySection().SetHeader(hdr, wml.ST_HdrFtrDefault)
-	}
 
 	z := zip.NewWriter(w)
 	defer z.Close()
@@ -1153,14 +1138,14 @@ func (d Document) Bookmarks() []Bookmark {
 }
 
 // SetConformance sets conformance attribute of the document
-// as one of these values from github.com/unidoc/unioffice/schema/soo/ofc/sharedTypes:
+// as one of these values from github.com/umbrellala/unioffice/schema/soo/ofc/sharedTypes:
 // ST_ConformanceClassUnset, ST_ConformanceClassStrict or ST_ConformanceClassTransitional.
 func (d Document) SetConformance(conformanceAttr st.ST_ConformanceClass) {
 	d.x.ConformanceAttr = conformanceAttr
 }
 
 // SetStrict is a shortcut for document.SetConformance,
-// as one of these values from github.com/unidoc/unioffice/schema/soo/ofc/sharedTypes:
+// as one of these values from github.com/umbrellala/unioffice/schema/soo/ofc/sharedTypes:
 // ST_ConformanceClassUnset, ST_ConformanceClassStrict or ST_ConformanceClassTransitional.
 func (d Document) SetStrict(strict bool) {
 	if strict {

@@ -12,7 +12,6 @@ import (
 	"bytes"
 	"encoding/xml"
 	"errors"
-	"flag"
 	"fmt"
 	"image"
 	"image/jpeg"
@@ -21,17 +20,15 @@ import (
 	"os"
 	"path"
 
-	"github.com/unidoc/unioffice"
-	"github.com/unidoc/unioffice/color"
-	"github.com/unidoc/unioffice/common"
-	"github.com/unidoc/unioffice/common/license"
-	"github.com/unidoc/unioffice/measurement"
-	"github.com/unidoc/unioffice/schema/soo/dml"
-	crt "github.com/unidoc/unioffice/schema/soo/dml/chart"
-	"github.com/unidoc/unioffice/schema/soo/ofc/sharedTypes"
-	"github.com/unidoc/unioffice/schema/soo/pkg/relationships"
-	"github.com/unidoc/unioffice/schema/soo/pml"
-	"github.com/unidoc/unioffice/zippkg"
+	"github.com/umbrellala/unioffice"
+	"github.com/umbrellala/unioffice/common"
+	"github.com/umbrellala/unioffice/measurement"
+	"github.com/umbrellala/unioffice/schema/soo/dml"
+	crt "github.com/umbrellala/unioffice/schema/soo/dml/chart"
+	"github.com/umbrellala/unioffice/schema/soo/ofc/sharedTypes"
+	"github.com/umbrellala/unioffice/schema/soo/pkg/relationships"
+	"github.com/umbrellala/unioffice/schema/soo/pml"
+	"github.com/umbrellala/unioffice/zippkg"
 )
 
 // Presentation is the a presentation base document.
@@ -409,21 +406,6 @@ func (p *Presentation) SaveAsTemplate(w io.Writer) error {
 func (p *Presentation) save(w io.Writer, isTemplate bool) error {
 	if err := p.x.Validate(); err != nil {
 		log.Printf("validation error in document: %s", err)
-	}
-
-	if !license.GetLicenseKey().IsLicensed() && flag.Lookup("test.v") == nil {
-		fmt.Println("Unlicensed version of UniOffice")
-		fmt.Println("- Get a license on https://unidoc.io")
-		slide := p.Slides()[0]
-		tb := slide.AddTextBox()
-		tb.Properties().SetPosition(0, 0)
-		tb.Properties().LineProperties().SetWidth(2 * measurement.Inch)
-		p := tb.AddParagraph()
-		r := p.AddRun()
-		r.SetText("Unlicensed version of UniOffice - Get a license on https://unidoc.io")
-		r.Properties().SetSize(12 * measurement.Point)
-		r.Properties().SetBold(true)
-		r.Properties().SetSolidFill(color.Red)
 	}
 
 	if isTemplate {

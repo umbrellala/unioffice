@@ -14,10 +14,10 @@ import (
 	"os"
 	"testing"
 
-	"github.com/unidoc/unioffice/schema/soo/sml"
-	"github.com/unidoc/unioffice/spreadsheet"
-	"github.com/unidoc/unioffice/testhelper"
-	"github.com/unidoc/unioffice/zippkg"
+	"github.com/umbrellala/unioffice/schema/soo/sml"
+	"github.com/umbrellala/unioffice/spreadsheet"
+	"github.com/umbrellala/unioffice/testhelper"
+	"github.com/umbrellala/unioffice/zippkg"
 )
 
 func TestWorksheetUnmarshal(t *testing.T) {

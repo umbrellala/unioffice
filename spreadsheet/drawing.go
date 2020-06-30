@@ -10,16 +10,16 @@ package spreadsheet
 import (
 	"fmt"
 
-	"github.com/unidoc/unioffice"
-	"github.com/unidoc/unioffice/chart"
-	"github.com/unidoc/unioffice/color"
-	"github.com/unidoc/unioffice/common"
-	"github.com/unidoc/unioffice/measurement"
+	"github.com/umbrellala/unioffice"
+	"github.com/umbrellala/unioffice/chart"
+	"github.com/umbrellala/unioffice/color"
+	"github.com/umbrellala/unioffice/common"
+	"github.com/umbrellala/unioffice/measurement"
 
-	"github.com/unidoc/unioffice/schema/soo/dml"
-	c "github.com/unidoc/unioffice/schema/soo/dml/chart"
-	crt "github.com/unidoc/unioffice/schema/soo/dml/chart"
-	sd "github.com/unidoc/unioffice/schema/soo/dml/spreadsheetDrawing"
+	"github.com/umbrellala/unioffice/schema/soo/dml"
+	c "github.com/umbrellala/unioffice/schema/soo/dml/chart"
+	crt "github.com/umbrellala/unioffice/schema/soo/dml/chart"
+	sd "github.com/umbrellala/unioffice/schema/soo/dml/spreadsheetDrawing"
 )
 
 // Drawing is a drawing overlay on a sheet.  Only a single drawing is allowed

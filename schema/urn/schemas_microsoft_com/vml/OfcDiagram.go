@@ -13,7 +13,7 @@ import (
 	"encoding/xml"
 	"strconv"
 
-	"github.com/unidoc/unioffice"
+	"github.com/umbrellala/unioffice"
 )
 
 type OfcDiagram struct {

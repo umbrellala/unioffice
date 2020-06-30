@@ -12,7 +12,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/unidoc/unioffice/document"
+	"github.com/umbrellala/unioffice/document"
 )
 
 func TestEndnotesLoad(t *testing.T) {

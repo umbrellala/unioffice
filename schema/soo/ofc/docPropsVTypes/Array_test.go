@@ -13,7 +13,7 @@ import (
 	"encoding/xml"
 	"testing"
 
-	"github.com/unidoc/unioffice/schema/soo/ofc/docPropsVTypes"
+	"github.com/umbrellala/unioffice/schema/soo/ofc/docPropsVTypes"
 )
 
 func TestArrayConstructor(t *testing.T) {

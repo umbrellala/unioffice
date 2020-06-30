@@ -12,7 +12,7 @@ package picture
 import (
 	"encoding/xml"
 
-	"github.com/unidoc/unioffice"
+	"github.com/umbrellala/unioffice"
 )
 
 type Pic struct {

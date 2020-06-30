@@ -15,10 +15,10 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/unidoc/unioffice"
+	"github.com/umbrellala/unioffice"
 
-	"github.com/unidoc/unioffice/schema/soo/wml"
-	"github.com/unidoc/unioffice/zippkg"
+	"github.com/umbrellala/unioffice/schema/soo/wml"
+	"github.com/umbrellala/unioffice/zippkg"
 )
 
 func TestCreatorUnknownType(t *testing.T) {

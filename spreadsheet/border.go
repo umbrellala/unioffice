@@ -8,9 +8,9 @@
 package spreadsheet
 
 import (
-	"github.com/unidoc/unioffice"
-	"github.com/unidoc/unioffice/color"
-	"github.com/unidoc/unioffice/schema/soo/sml"
+	"github.com/umbrellala/unioffice"
+	"github.com/umbrellala/unioffice/color"
+	"github.com/umbrellala/unioffice/schema/soo/sml"
 )
 
 // Border is a cell border configuraton.

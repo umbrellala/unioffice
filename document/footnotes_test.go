@@ -15,7 +15,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/unidoc/unioffice/document"
+	"github.com/umbrellala/unioffice/document"
 )
 
 func TestFootnotesLoad(t *testing.T) {
