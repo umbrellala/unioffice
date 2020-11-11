@@ -10,7 +10,6 @@ package document
 import (
 	"archive/zip"
 	"errors"
-	"flag"
 	"fmt"
 	"image"
 	"image/jpeg"
@@ -21,10 +20,7 @@ import (
 	"strings"
 
 	"github.com/umbrellala/unioffice"
-	"github.com/umbrellala/unioffice/color"
 	"github.com/umbrellala/unioffice/common"
-	"github.com/umbrellala/unioffice/common/license"
-	"github.com/umbrellala/unioffice/measurement"
 	"github.com/umbrellala/unioffice/zippkg"
 
 	"github.com/umbrellala/unioffice/schema/soo/dml"
