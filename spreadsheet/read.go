@@ -22,7 +22,7 @@ import (
 // Read reads a workbook from an io.Reader(.xlsx).
 func Read(r io.ReaderAt, size int64) (*Workbook, error) {
 	wb := New()
-	td, err := ioutil.TempDir("", "gooxml-xlsx")
+	td, err := ioutil.TempDir(".", "gooxml-xlsx")
 	if err != nil {
 		return nil, err
 	}
@@ -44,7 +44,7 @@ func Read(r io.ReaderAt, size int64) (*Workbook, error) {
 		return nil, err
 	}
 
-	// etra files are things we don't handle yet, or files that happened to have
+	// extra files are things we don't handle yet, or files that happened to have
 	// been in the zip before.  We just round-trip them.
 	for _, f := range files {
 		if f == nil {
